@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Position2D.gd" type="Script" id=1]
+[ext_resource path="res://TestPoint.gd" type="Script" id=2]
+[ext_resource path="res://Node2D.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Circle" type="Position2D" parent="."]
+position = Vector2( 127, -74 )
+script = ExtResource( 1 )
+radius = 60
+
+[node name="TestPoint" type="Position2D" parent="."]
+position = Vector2( 238, -85 )
+script = ExtResource( 2 )
