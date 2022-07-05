@@ -13,6 +13,7 @@ func _ready():
 	$Camera2D.set_zoom(Vector2(0.1, 0.1))
 	$Camera2D.position = window_middle;
 	$Line2D.set_point_position(0, window_middle)
+	$Line2D.visible = true;
 	set_process_input(true)
 
 func _input(ev):
