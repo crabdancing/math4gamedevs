@@ -5,7 +5,7 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export var pos = 0
+export var path_along_trajectory = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -13,14 +13,15 @@ func _ready():
 func _draw():
 	var posA = $posA.position
 	var posB = $posB.position
-	var aToBDir = (posB - posA).normalized()
 	if posA != null && posB != null:
+		var a_to_b_trajectory = (posB - posA).normalized()
 		draw_line(posA, posB, Color(0.683594, 0.683594, 0.683594) , true)
 		draw_circle(posA, 10, Color(0.042969, 0.282227, 1))
 		draw_circle(posB, 10, Color(0.996094, 0.513611, 0))
+		var node_along_path = a_to_b_trajectory * path_along_trajectory + posA
 		
-		draw_circle(aToBDir * pos + posA, 10, Color(0.960938, 0.22522, 0.483871))
-	
+		draw_circle(node_along_path,
+			10, Color(0.960938, 0.22522, 0.483871))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
