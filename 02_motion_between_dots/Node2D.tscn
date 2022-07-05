@@ -4,13 +4,13 @@
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
-path_along_trajectory = 500
+path_along_trajectory = 300
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
 [node name="posA" type="Position2D" parent="."]
-position = Vector2( -99, -53 )
+position = Vector2( -254, -106 )
 
 [node name="posB" type="Position2D" parent="."]
-position = Vector2( 298, 147 )
+position = Vector2( 319, 146 )
