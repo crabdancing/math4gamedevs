@@ -21,5 +21,5 @@ func _draw():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	radius_squared = radius * radius
-	update()
+	#update()
 #	pass
