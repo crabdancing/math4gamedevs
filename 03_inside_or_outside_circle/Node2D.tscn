@@ -13,8 +13,7 @@ current = true
 [node name="Circle" type="Position2D" parent="."]
 position = Vector2( 127, -74 )
 script = ExtResource( 1 )
-radius = 60
 
 [node name="TestPoint" type="Position2D" parent="."]
-position = Vector2( 238, -85 )
+position = Vector2( 135, 152 )
 script = ExtResource( 2 )

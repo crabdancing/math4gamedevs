@@ -8,5 +8,8 @@ func _ready():
 
 
 func _process(delta):
-	$TestPoint.is_inside = ($Circle.position - $TestPoint.position).length() < $Circle.radius
+	# You could calculate with `distance` vs `radius`, but cutting off part of the pythagorean theorem
+	# saves processing power by only making the op necessary if the circle radius changes,
+	# and replacing sqrt with mult op.
+	$TestPoint.is_inside = $TestPoint.position.distance_squared_to($Circle.position) < $Circle.radius_squared
 
